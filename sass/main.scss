@@ -102,6 +102,18 @@ figure {
     }
   }
 
+  &.youtube {
+    width: 100%;
+    height: auto;
+    border: none;
+
+    iframe {
+      border: none;
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+
   figcaption {
     font-size: 14px;
     padding: 5px 10px;
