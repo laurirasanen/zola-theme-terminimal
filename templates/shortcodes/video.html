@@ -1,0 +1,10 @@
+{% if src %}
+  <figure class="{% if position %}{{ position }}{% else -%} center {%- endif %}" >
+    <video width="100%" height="auto" controls {% if alt %} alt="{{ alt }}"{% endif %}{% if style %} style="{{ style }}"{% endif %}>
+      <source src="{{ src | safe }}" type="{% if type %}{{ type }}{% else -%} video/mp4 {%- endif %}">
+    </video>
+    {% if caption %}
+      <figcaption class="{% if caption_position %}{{ caption_position }}{% else -%} center {%- endif %}"{% if caption_style %} style="{{ caption_style | safe }}"{% endif %}>{{ caption }}</figcaption>
+    {% endif %}
+  </figure>
+{% endif %}
