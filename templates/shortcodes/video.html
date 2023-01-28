@@ -1,6 +1,6 @@
 {% if src %}
   <figure class="{% if position %}{{ position }}{% else -%} center {%- endif %}" >
-    <video width="100%" height="auto" controls {% if loop %} loop {% endif %} {% if autoplay %} autoplay {% endif %} {% if alt %} alt="{{ alt }}"{% endif %}{% if style %} style="{{ style }}"{% endif %} loading="lazy">
+    <video width="100%" height="auto" controls {% if loop %} loop {% endif %} {% if autoplay %} autoplay {% endif %} {% if alt %} alt="{{ alt }}"{% endif %}{% if style %} style="{{ style }}"{% endif %} preload="metadata" loading="lazy">
       <source src="{{ src | safe }}" type="{% if type %}{{ type }}{% else -%} video/mp4 {%- endif %}">
     </video>
     {% if caption %}
