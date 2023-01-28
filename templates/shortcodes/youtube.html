@@ -1,12 +1,11 @@
 {% if id %}
   <figure class="youtube {% if position %}{{ position }}{% else -%} center {%- endif %}" >
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/{{id}}?autoplay=0"
-      loading="lazy"
-      webkitallowfullscreen
-      mozallowfullscreen
-      allowfullscreen>
-    </iframe>
+    <div class="link-container">
+      <a href="https://www.youtube.com/watch?v={{id}}" rel="noopener noreferrer" target="_blank">
+        <img src="https://i.ytimg.com/vi/{{id}}/maxresdefault.jpg"{% if alt %} alt="{{ alt }}"{% endif %}{% if style %} style="{{ style }}"{% endif %} loading="lazy" />
+        <div class="play-button"></div>
+      </a>
+    </div>
     {% if caption %}
       <figcaption class="{% if caption_position %}{{ caption_position }}{% else -%} center {%- endif %}"{% if caption_style %} style="{{ caption_style | safe }}"{% endif %}>{{ caption }}</figcaption>
     {% endif %}

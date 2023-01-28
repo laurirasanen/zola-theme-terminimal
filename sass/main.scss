@@ -103,14 +103,22 @@ figure {
   }
 
   &.youtube {
-    width: 100%;
-    height: auto;
-    border: none;
+    .link-container {
+      position: relative;
 
-    iframe {
-      border: none;
-      width: 100%;
-      aspect-ratio: 16/9;
+      .play-button {
+        position: absolute;
+        z-index: 1;
+        width: 10rem;
+        height: 10rem;
+        top: calc(50% - 5rem);
+        left: calc(50% - 5rem);
+
+        box-sizing: border-box;
+        border-style: solid;
+        border-width: calc(5rem) 0 calc(5rem) calc(10rem);
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.6);
+      }
     }
   }
 
