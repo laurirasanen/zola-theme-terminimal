@@ -59,6 +59,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  min-height: 200px;
 
   &.left {
     margin-right: auto;
